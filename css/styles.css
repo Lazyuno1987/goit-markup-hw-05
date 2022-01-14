@@ -85,6 +85,7 @@ color: var(--first-color);
 padding-top: 32px;
 padding-bottom: 32px;
 position: relative;
+transition: color;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -133,6 +134,7 @@ line-height:calc(16 / 14);
 color:var(--second-color) ;
 padding-top: 32px;
 padding-bottom: 32px;
+transition: color;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -153,6 +155,7 @@ color: var(--accent-color) ;
 .contact-letter{
     margin-right: 10px;
     fill: currentColor;
+    transition: fill;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
   
@@ -163,6 +166,7 @@ margin-right: 10px;
 fill: currentColor;
 width: 10px;
 height: 16px;
+transition: fill;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 
@@ -214,6 +218,7 @@ border-radius: 4px;
 padding: 10px 32px;
 min-width: 200px;
 border-color: transparent;
+transition: background-color;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 
@@ -434,6 +439,7 @@ margin-bottom: 16px;
     align-items: center;
     justify-content: center;
     color:#AFB1B8 ;
+    transition: color, background-color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -475,6 +481,7 @@ margin-bottom: 50px;
     justify-content: center;
     align-items: center;
     color: #AFB1B8;
+    transition: background-color, color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -550,6 +557,7 @@ line-height: 1.71;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 display: block;
+transition: color;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -588,6 +596,7 @@ justify-content: center;
 align-items: center;
 width: 44px;
 height: 44px;
+transition:  background-color;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -638,6 +647,7 @@ background: #F5F4FA;
 border-radius: 4px;
 border:1px solid transparent;
 padding: 6px 22px;
+transition: box-shadow, color, background-color;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -675,6 +685,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .content-link{
+    transition: box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 }
@@ -761,6 +772,7 @@ list-style: none;
     top: 0;
     left: 0;
  transform: translateY(100%);
+ transition: transform;
  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  transition-duration: 250ms;
 
