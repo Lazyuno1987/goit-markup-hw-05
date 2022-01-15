@@ -75,7 +75,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
-  transition: color;
+  transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -122,7 +122,7 @@ img {
   color: var(--second-color);
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color;
+  transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -143,7 +143,7 @@ img {
 .contact-letter {
   margin-right: 10px;
   fill: currentColor;
-  transition: fill;
+  transition-property: fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -153,7 +153,7 @@ img {
   fill: currentColor;
   width: 10px;
   height: 16px;
-  transition: fill;
+  transition-property: fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -201,7 +201,7 @@ img {
   padding: 10px 32px;
   min-width: 200px;
   border-color: transparent;
-  transition: background-color;
+  transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -403,7 +403,7 @@ img {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
-  transition: color, background-color;
+  transition-property: color, background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -444,7 +444,7 @@ img {
   justify-content: center;
   align-items: center;
   color: #afb1b8;
-  transition: background-color, color;
+  transition-property: border-color, color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -507,7 +507,7 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   display: block;
-  transition: color;
+  transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -545,7 +545,7 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
-  transition: background-color;
+  transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -591,7 +591,7 @@ img {
   border-radius: 4px;
   border: 1px solid transparent;
   padding: 6px 22px;
-  transition: box-shadow, color, background-color;
+  transition-property: box-shadow, color, background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -625,7 +625,7 @@ img {
 }
 
 .content-link {
-  transition: box-shadow;
+  transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -700,7 +700,7 @@ img {
   top: 0;
   left: 0;
   transform: translateY(100%);
-  transition: transform;
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -716,8 +716,7 @@ img {
   width: 100vw;
   height: 100vh;
   top: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -728,7 +727,9 @@ img {
   border-radius: 4px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotateZ(360deg);
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
   width: 30px;
@@ -750,11 +751,10 @@ img {
   align-items: center;
 }
 .backdrop .is-hidden .modal {
-  transform: translate(-50%, -50%) rotateZ(0deg);
 }
 .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transform: rotate(0);
+  transform: rotate(360deg);
 }
